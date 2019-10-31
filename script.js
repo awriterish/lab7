@@ -1,3 +1,4 @@
+//AJAX and jQuery lab for CSCI340
 $(document).ready(function () {
 	function getPersonalInfo(){
 		$.ajax({
@@ -14,6 +15,7 @@ $(document).ready(function () {
 			}
 		});
 	}
+	
 	$('#personal').click(getPersonalInfo);
     $('#generate').click(function () {
         $.ajax({
