@@ -22,7 +22,7 @@ $(document).ready(function () {
             success: function (data) {
 				data = data["results"][0];
                 console.log(data);
-				$("#profile-pic").attr("src",data["picture"]["large"]);
+				$("#portrait-pic").attr("src",data["picture"]["large"]);
 				$("#firstName").text(data["name"]["first"]);
 				$("#lastName").text(data["name"]["last"]);
 				$("#birthday").text(new Date(data["dob"]["date"]).toLocaleDateString());
@@ -35,7 +35,9 @@ $(document).ready(function () {
 				$("#national").text(data["nat"]);
 				$("#uuid").text(data["login"]["uuid"]);
 				$("#username").text(data["login"]["username"]);
-				$("#years").text(data["registered"]["age"]);
+				$("#age").text(data["registered"]["age"]);
+				$("#years").text(data["registered"]["age"]==1?"year":"years");
+				$("#profile").attr("src", "https://api.kwelo.com/v1/media/identicon/" + $("#email").html());
 				getPersonalInfo();
             }
         });

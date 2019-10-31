@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://kit.fontawesome.com/82e12c1aac.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Lato|Yantramanav:700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="stylesheet.css">
 	</head>
 	<body>
@@ -14,54 +15,89 @@
 			<button class="btn btn-primary" id="personal">Get local infomation</button>
 		</div>
 		<br>
+		<br>
 		<div class="container" id="folder">
+			<h2>General User Information</h2>
+			<br>
 			<div class="container row" id="basicInfo">
-				<div class="col-md-3">
-					<img id="profile-pic" src="img/unknown.png" alt="profile picture">
+				<div class="col-md-2">
+					<img id="portrait-pic" src="img/unknown.png" alt="portrait picture">
 				</div>
-				<div class="col-md-9">
-					<p><strong>First Name:</strong> <span id="firstName"></span></p>
-					<p><strong>Last Name:</strong> <span id="lastName"></span></p>
-					<p><strong>Birthday:</strong> <span id="birthday"></span></p>
-					<p><strong>Gender:</strong> <span id="gender"></span></p>
+				<div clas="col-md-2">
+					<img id="profile" src="img/unknown.png" alt="profile picture">
+				</div>
+				<div class="col-md-8 box">
+					<p class="basic"><strong class="fancyFont">First Name:</strong> <span id="firstName"></span></p>
+					<p class="basic"><strong class="fancyFont">Last Name:</strong> <span id="lastName"></span></p>
+					<p class="basic"><strong class="fancyFont">Birthday:</strong> <span id="birthday"></span></p>
+					<p class="basic"><strong class="fancyFont">Gender:</strong> <span id="gender"></span></p>
 				</div>
 			</div>
 			<br>
+			<br>
+			<h2>Specific User Information</h2>
+			<br>
 			<div class="container row" id="in_depths">
-				<div class="col-md-4">
+				<div class="col-md-4 box">
 					<h3>Contact Information</h3>
 					<p><i class="far fa-envelope"></i> <span id="email">someone@example.com</span></p>
 					<p><i class="fas fa-mobile-alt"></i> <span id="mobile">##########</span></p>
 					<p><i class="fas fa-phone"></i> <span id="phone">##########</span></p>
 				</div>
-				<div class="col-md-4" id="location">
+				<div class="col-md-4 box" id="location">
 					<h3>User Location</h3>
 					<p><i class="fas fa-map-marker-alt"></i> <span id="locs"></span></p>
 					<p><i class="fas fa-globe"></i> <span id="national"></span></p>
 				</div>
-				<div class="col-md-4" id="user">
+				<div class="col-md-4 box" id="user">
 					<h3>User Account</h3>
 					<p><i class="fas fa-id-card"></i> <span id="uuid"></span></p>
 					<p><i class="fas fa-user"></i> <span id="username"></span></p>
-					<p><i class="far fa-calendar-check"></i> Account is <span id="years"></span> years old</p>
+					<p><i class="far fa-calendar-check"></i> Account is <span id="age"></span> <span id="years"></span> old</p>
 				</div>
 			</div>
 			<br>
+			<br>
+			<h2>Access Computer Information</h2>
+			<br> 	
 			<div class="container row" id="access">
-				<div class="col-md-6">
+				<div class="col-md-6 box">
 					<h3>This account is being accessed from</h3>
 					<p><i class="fas fa-wifi"></i> <span id="ip"></span></p>
 					<p><i class="fas fa-map-marker-alt"></i> <span id="address"></span></p>
 					<p><i class="fas fa-satellite-dish"></i> <span id="provide"></span></p>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 box">
 					<h3>On</h3>
 					<p><i class="fas fa-laptop"></i> <span id="os"></span></p>
-					<p><i class="fas fa-code"></i> <span id="browser"></span></p>
+					<p><i class="fas fa-angle-right"></i> <span id="browser"></span></p>
 					<p><i class="fas fa-info-circle"></i> <span id="vendor"></span></p>
 				</div>
 			</div>
-		</div>		
+		</div>
+		<br>
+		<footer id="footer">
+			<div class="container row">
+				<div class="col-md-6">
+					<h3>APIs Used</h3>
+					<ul class="footerList">
+						<li><a class="footerLink" href="https://randomuser.me/" target="_blank">RandomUser</a>- Generates random user data.</li>
+						<li><a class="footerLink" href="https://www.kwelo.com/media/identicon/" target="_blank">Identicon</a>- Generates abstract avatars.</li>
+						<li><a class="footerLink" href="https://www.geojs.io/" target="_blank">GeoJS</a>- IP Geolocation</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<h3>Other Frameworks/Resources</h3>
+					<ul class="footerList">
+						<li><a class="footerLink" href="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" target="_blank">jQuery</a>- A simple JavaScript framework</li>
+						<li><a class="footerLink" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" target="_blank">Bootstrap</a>- Easy styling with CSS</li>
+						<li><a class="footerLink" href="https://fonts.google.com/" target="_blank">GoogleFonts</a>- Fonts used- Lato, Yantramanav</li>
+						<li><a class="footerLink" href="https://kit.fontawesome.com/" target="_blank">FontAwesome</a>- Webicons</li>
+					</ul>
+				</div>
+			</div>
+			<p><i class="fas fa-code"></i> Nova Blankenship and Ryan Wisely</p>
+		</footer>
 		<script src="script.js"></script>
 	</body>
 </html>
